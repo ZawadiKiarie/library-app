@@ -1,0 +1,209 @@
+*{
+  font-family: "basic-sans", sans-serif;
+}
+
+.header-ctn{
+  margin-left: 160px;
+  margin-bottom: 60px;
+}
+
+h1{
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.tag{
+  font-size: 20px;
+}
+
+.main-ctn{
+  display: flex;
+  justify-content: center;
+}
+
+.hr1{
+  border-bottom: 1px solid gray;
+  margin-top: 10px;
+  width: 930px;
+}
+
+.hr{
+  border-bottom: 1px solid gray;
+  margin-top: 20px;
+  width: 930px;
+}
+
+.table-titles{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 300px 150px 100px 200px 100px;
+  column-gap: 20px;
+}
+
+.table-titles div{
+  font-weight: 700;
+}
+
+.bookrow{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 300px 150px 100px 200px 100px;
+  column-gap: 20px;
+}
+
+.book-col{
+  text-align: left;
+}
+
+.add-book{
+  margin-top: 20px;
+  border: none;
+  padding: 12px 38px;
+  background-color: rgb(120, 153, 153);
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.add-book:hover,
+#submitBtn:hover {
+  transform: scale(1.1);
+}
+
+.add-book:active,
+#submitBtn:hover {
+  transform: translate(0, 4px);
+}
+
+form div{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+
+input{
+  border: none;
+  background-color: rgb(192, 203, 203);
+  height: 20px;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus{
+  box-shadow: 0 0 5px rgb(141, 150, 150); 
+}
+
+#status{
+  width: 20px;
+  height: 20px;
+}
+
+#submitBtn{
+  margin-top: 10px;
+  border: none;
+  padding: 6px 25px;
+  background-color: rgb(120, 153, 153);
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cancel-ctn{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+#cancel{
+  border: none;
+  background-color: rgb(192, 203, 203);
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#cancel:hover{
+  box-shadow: 0 0 5px rgb(141, 150, 150); 
+}
+
+dialog[open] {
+  opacity: 1;
+  animation: fadeInScale 0.5s ease-in-out forwards;
+}
+
+dialog {
+  opacity: 0;
+  transform: scale(0.5); /* Initial smaller scale */
+}
+
+/* Keyframes for fade-in and scale animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Styles for the blurred backdrop */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0);
+  transition:
+    background-color 0.5s ease-in-out,
+    backdrop-filter 0.5s ease-in-out;
+}
+
+dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+}
+
+.delete-btn{
+  border: none;
+  padding: 6px 25px;
+  background-color: rgb(120, 153, 153);
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.read-btn{
+  border: none;
+  padding: 6px 25px;
+  background-color: rgb(120, 153, 153);
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 120px;
+}
+
+.read-btn:hover,
+.delete-btn:hover{
+  background-color: rgb(148, 185, 185);
+}
+
+.not-read-btn{
+  border: none;
+  padding: 6px 25px;
+  background-color: rgb(223, 148, 182);
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 120px;
+}
+
+.not-read-btn:hover{
+  background-color: rgb(224, 168, 193);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.typekit.net/snx5rei.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icons/favicon.png">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div class="header-ctn">
+    <div class="header">
+      <h1>Library</h1>
+      <div class="tag">Find all your books here or add more!</div>
+      <button class="add-book">Add a new book</button>
+    </div>
+    
+  </div>
+  
+  <div class="main-ctn">
+    <div class="main">
+      <div class="table-titles">
+        <div>Name</div>
+        <div>Author</div>
+        <div>Pages</div>
+        <div>Status</div>
+        <div>Delete</div>
+      </div>
+      <div class="hr1"></div>
+      <div class="book-container"></div>
+    </div>
+  </div>
+  
+
+  <dialog id="dialog">
+    <form id="form" method="dialog">
+      <div class="cancel-ctn">
+        <button id="cancel" value="cancel" formmethod="dialog">X</button>
+      </div>
+      
+      <div class="input-block">
+        <label for="title">Title</label>
+        <input type="text" id="title" required>
+      </div>
+
+      <div class="input-block">
+        <label for="author">Author</label>
+        <input type="text" id="author" required>
+      </div>
+
+      <div class="input-block">
+        <label for="pages">Pages</label>
+        <input type="number" id="pages" required>
+      </div>
+
+      <div class="input-block">
+        <label for="status">Have you read it?</label>
+        <input type="checkbox" id="status" value="false">
+      </div>
+
+      <button type="submit" id="submitBtn">Submit</button>
+
+    </form>
+  </dialog>
+</body>
+</html>
